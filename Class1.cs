@@ -254,7 +254,7 @@ namespace BlockInsertionV3
             }
 
             //change this should the folder move or the server change namesVVVVVVVVVVVV
-            string folder = @"Y:\Product Development\Forms\Spec Sheets\";
+            string folder = @"DRIVE LOC:\Product Development\Forms\Spec Sheets\";
             string specSheet = "";
             switch (specName.ToUpper())
             {
@@ -276,7 +276,7 @@ namespace BlockInsertionV3
                     specSheet = "Poly Specification.dwg";
                     break;
                 case "FRAME":
-                    return @"Y:\Engineering\Drawings\Blocks\Standard Forms\SF_CNC_BORDER_V2.dwg";
+                    return @"DRIVE LOC:\Engineering\Drawings\Blocks\Standard Forms\SF_CNC_BORDER_V2.dwg";
                 default:
                     //call method to choose a file from the folder, or some such
                     specSheet = pickSpec(ed, doc);
@@ -624,7 +624,7 @@ namespace BlockInsertionV3
             string specName = Path.GetFileNameWithoutExtension(specPath);
             Database dbCurrent = Application.DocumentManager.MdiActiveDocument.Database;
             //error log
-            string errLog = @"C:\temp\Error Log.csv";
+            string errLog = @"DRIVE LOC:\temp\Error Log.csv";
             StringBuilder attOut = new StringBuilder();
 
             //dimensions of selection
